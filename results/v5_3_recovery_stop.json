@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "decision": "STOPPED_WITH_UNRESOLVED_INFRASTRUCTURE_FAILURES",
+  "decided_at": "2026-09-05T07:31:13.775919+00:00",
+  "planned_cells": 1540,
+  "completed_cells": 1431,
+  "terminal_or_retry_exhausted_cells": 103,
+  "stopped_recovery_cells": 6,
+  "scientific_outcome_denominator": "valid completed cells only",
+  "stopped_cells_classification": "infrastructure_missing_not_model_failure",
+  "scheduled_task_disabled": "V5_3_ToolFilter_Supervisor",
+  "remaining_cells": [
+    {
+      "planned_cell_id": "v53_172c58f34dd22f6b",
+      "attempt": 23,
+      "status": "rate_limited",
+      "requested_model": "poolside/laguna-xs-2.1:free",
+      "recovery_reason": "quota_reset_recovery",
+      "error_class": "RateLimitError",
+      "error_message_sha256": "741a61e2fbdb3775c646ea71f5be9974a45042b7c0fa44187b1e49156396ea18"
+    },
+    {
+      "planned_cell_id": "v53_4663b9a1eb871d8c",
+      "attempt": 21,
+      "status": "rate_limited",
+      "requested_model": "poolside/laguna-xs-2.1:free",
+      "recovery_reason": "quota_reset_recovery",
+      "error_class": "RateLimitError",
+      "error_message_sha256": "741a61e2fbdb3775c646ea71f5be9974a45042b7c0fa44187b1e49156396ea18"
+    },
+    {
+      "planned_cell_id": "v53_7c4cb2f730f4240a",
+      "attempt": 26,
+      "status": "rate_limited",
+      "requested_model": "poolside/laguna-xs-2.1:free",
+      "recovery_reason": "quota_reset_recovery",
+      "error_class": "RateLimitError",
+      "error_message_sha256": "491ccdd882870359890e19919798913057c85d6475b8aab8ad0b58f46c3a366a"
+    },
+    {
+      "planned_cell_id": "v53_866bd0da7162d5b6",
+      "attempt": 20,
+      "status": "rate_limited",
+      "requested_model": "poolside/laguna-xs-2.1:free",
+      "recovery_reason": "quota_reset_recovery",
+      "error_class": "RateLimitError",
+      "error_message_sha256": "491ccdd882870359890e19919798913057c85d6475b8aab8ad0b58f46c3a366a"
+    },
+    {
+      "planned_cell_id": "v53_87c61601ae671477",
+      "attempt": 21,
+      "status": "rate_limited",
+      "requested_model": "poolside/laguna-xs-2.1:free",
+      "recovery_reason": "quota_reset_recovery",
+      "error_class": "RateLimitError",
+      "error_message_sha256": "491ccdd882870359890e19919798913057c85d6475b8aab8ad0b58f46c3a366a"
+    },
+    {
+      "planned_cell_id": "v53_bd24212915fad7ba",
+      "attempt": 20,
+      "status": "rate_limited",
+      "requested_model": "poolside/laguna-xs-2.1:free",
+      "recovery_reason": "quota_reset_recovery",
+      "error_class": "RateLimitError",
+      "error_message_sha256": "741a61e2fbdb3775c646ea71f5be9974a45042b7c0fa44187b1e49156396ea18"
+    }
+  ],
+  "plan_sha256": "2bb216abbb61288a2021e028a11c46a5b585f7f9919244e5563ecbe70f80b51d",
+  "ledger_sha256": "aa46bf52b86c7e938161d6b795c63053d8ac907630632f04b4564e5752721b30",
+  "amendment_sha256": "b95e61409375ed35ca6f5f7bb7119ef903aea86c1716798181440474a796a355"
+}

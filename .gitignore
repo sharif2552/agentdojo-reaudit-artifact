@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+*.log
+*.pid
+
+# Private or raw research material must never be committed
+paper/
+raw_attempts*.jsonl
+PRIVATE_*

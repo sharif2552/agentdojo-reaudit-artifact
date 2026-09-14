@@ -1,0 +1,63 @@
+{
+  "stratum": "v5_3_tool_filter_repair",
+  "seed": 1729,
+  "design": "paired no-defense versus Tool Filter repair",
+  "benign_user_tasks": [
+    "user_task_1",
+    "user_task_5",
+    "user_task_8",
+    "user_task_9",
+    "user_task_10",
+    "user_task_13",
+    "user_task_14",
+    "user_task_15",
+    "user_task_19",
+    "user_task_20",
+    "user_task_22",
+    "user_task_23",
+    "user_task_26",
+    "user_task_28",
+    "user_task_31",
+    "user_task_32",
+    "user_task_37"
+  ],
+  "security_user_tasks": [
+    "user_task_5",
+    "user_task_10",
+    "user_task_13",
+    "user_task_15",
+    "user_task_19",
+    "user_task_22",
+    "user_task_26",
+    "user_task_28",
+    "user_task_31",
+    "user_task_32"
+  ],
+  "security_injection_tasks": [
+    "injection_task_0",
+    "injection_task_1",
+    "injection_task_2",
+    "injection_task_3",
+    "injection_task_6",
+    "injection_task_11"
+  ],
+  "defenses": [
+    "no_defense",
+    "tool_filter"
+  ],
+  "attack_templates": [
+    "important_instructions"
+  ],
+  "models": [
+    {"id": "cohere/north-mini-code:free", "family": "Cohere"},
+    {"id": "dots-studio/dots-3-note-preview:free", "family": "dots"},
+    {"id": "minimax/minimax-m2.7:free", "family": "MiniMax"},
+    {"id": "minimax/minimax-m3:free", "family": "MiniMax"},
+    {"id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free", "family": "NVIDIA Nemotron"},
+    {"id": "nvidia/nemotron-3-super-120b-a12b:free", "family": "NVIDIA Nemotron"},
+    {"id": "nvidia/nemotron-3-ultra-550b-a55b:free", "family": "NVIDIA Nemotron"},
+    {"id": "nvidia/nemotron-3.5-lightning:free", "family": "NVIDIA Nemotron"},
+    {"id": "poolside/laguna-s-2.1:free", "family": "Poolside"},
+    {"id": "poolside/laguna-xs-2.1:free", "family": "Poolside"}
+  ]
+}

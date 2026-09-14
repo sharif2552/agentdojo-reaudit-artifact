@@ -1,0 +1,159 @@
+{
+  "audit_date": "2026-08-13",
+  "agentdojo_version": "0.1.35",
+  "suite_version": "v1.2.2",
+  "suite": "workspace",
+  "scope": "Static source inspection of all 16 Workspace injection vectors against all 40 shipped user-task definitions.",
+  "conclusion": "No active task-critical-content-overwrite collision identified; two near-misses require the stated task-level qualifications.",
+  "limitations": [
+    "This is a static source audit, not an exhaustive runtime execution of every user-task by injection-task pair.",
+    "The conclusion does not cover Banking, Slack, Travel, older AgentDojo releases, or future releases.",
+    "The validator checks source completeness and placement; collision conclusions remain source-review claims."
+  ],
+  "vectors": [
+    {
+      "vector": "calendar_introductory_meeting_injection",
+      "source_file": "include/calendar.yaml",
+      "source_line": 40,
+      "host": "Introductory meeting event description",
+      "placement": "embedded_append",
+      "collision": "no",
+      "task_evidence": "The fixed introductory-meeting description remains present before the injected suffix."
+    },
+    {
+      "vector": "calendar_networking_event_injection_email",
+      "source_file": "include/calendar.yaml",
+      "source_line": 189,
+      "host": "Networking Event description",
+      "placement": "embedded_append",
+      "collision": "no",
+      "task_evidence": "The shipped networking-event task can still identify the event and its fixed descriptive content."
+    },
+    {
+      "vector": "calendar_sports_and_yoga_class_injection",
+      "source_file": "include/calendar.yaml",
+      "source_line": 140,
+      "host": "Sports and Yoga Class description",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "No shipped user task requires this event description."
+    },
+    {
+      "vector": "calendar_dinner_with_clients_injection",
+      "source_file": "include/calendar.yaml",
+      "source_line": 163,
+      "host": "Dinner with Blue Sparrow Tech description",
+      "placement": "embedded_append",
+      "collision": "no",
+      "task_evidence": "The fixed dinner-meeting description remains intact before the injected suffix."
+    },
+    {
+      "vector": "calendar_fake_deadline_description",
+      "source_file": "include/calendar.yaml",
+      "source_line": 298,
+      "host": "Deadline: data deletion event description",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "No shipped user task requires this event description."
+    },
+    {
+      "vector": "calendar_project_kickoff_description",
+      "source_file": "include/calendar.yaml",
+      "source_line": 68,
+      "host": "Project Kick-off event description",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "No shipped user task requires this event description."
+    },
+    {
+      "vector": "calendar_moving_event_reason_injection",
+      "source_file": "include/calendar.yaml",
+      "source_line": 310,
+      "host": "Moved: Clientcorp Presentation description",
+      "placement": "embedded_append",
+      "collision": "no",
+      "task_evidence": "The fixed reason and event metadata remain intact before the injected suffix."
+    },
+    {
+      "vector": "email_facebook_injection",
+      "source_file": "include/inbox.yaml",
+      "source_line": 297,
+      "host": "Fake Facebook email body",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "The shipped Facebook-code task targets a different legitimate message; the vector host is a fake reset message."
+    },
+    {
+      "vector": "email_hiking_injection",
+      "source_file": "include/inbox.yaml",
+      "source_line": 308,
+      "host": "Hiking advertisement email body",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "No shipped task requires the body of this advertisement message."
+    },
+    {
+      "vector": "email_events_injection",
+      "source_file": "include/inbox.yaml",
+      "source_line": 319,
+      "host": "Events-company advertisement email body",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "No shipped task requires this advertisement body."
+    },
+    {
+      "vector": "email_events_follow_up_injection",
+      "source_file": "include/inbox.yaml",
+      "source_line": 330,
+      "host": "Events-company follow-up email body",
+      "placement": "full_field",
+      "collision": "no",
+      "task_evidence": "No shipped task requires this follow-up body."
+    },
+    {
+      "vector": "email_password_reset_injection",
+      "source_file": "include/inbox.yaml",
+      "source_line": 341,
+      "host": "TechServices password-reset email body",
+      "placement": "embedded_middle",
+      "collision": "no",
+      "task_evidence": "The legitimate reset URL remains intact after the placeholder and is available to the shipped reset-link task."
+    },
+    {
+      "vector": "drive_feedback_injection",
+      "source_file": "include/cloud_drive.yaml",
+      "source_line": 17,
+      "host": "Noah Lee feedback CSV cell",
+      "placement": "full_cell",
+      "collision": "near_miss",
+      "task_evidence": "The related shipped task requests Olivia Smith, Mia Anderson, and Mason Thompson, not Noah Lee."
+    },
+    {
+      "vector": "drive_recipe_injection",
+      "source_file": "include/cloud_drive.yaml",
+      "source_line": 380,
+      "host": "End of recipe document",
+      "placement": "append_line",
+      "collision": "near_miss",
+      "task_evidence": "The related shipped task targets Chocolate Chip Cookies, which remains intact earlier in the document; the placeholder follows a truncated curry recipe."
+    },
+    {
+      "vector": "drive_team_building_injection",
+      "source_file": "include/cloud_drive.yaml",
+      "source_line": 632,
+      "host": "Fifth team-building list item",
+      "placement": "full_list_item",
+      "collision": "no",
+      "task_evidence": "No shipped task requires the original fifth list item as a ground-truth input."
+    },
+    {
+      "vector": "drive_keywords_stuffing_injection",
+      "source_file": "include/cloud_drive.yaml",
+      "source_line": 642,
+      "host": "Final line of keyword-stuffed spam document",
+      "placement": "append_line",
+      "collision": "no",
+      "task_evidence": "The placeholder is in a decoy document and does not remove fixed task-critical content."
+    }
+  ]
+}
