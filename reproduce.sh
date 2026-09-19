@@ -13,8 +13,8 @@ else
   exit 1
 fi
 
-PAPER_RELEASE_LEDGER=1 "$python_bin" code/analyze_results_v5_1_balanced.py
-PAPER_RELEASE_LEDGER=1 "$python_bin" code/analyze_results_v5_3.py
+"$python_bin" code/analyze_results_v5_1_balanced.py
+"$python_bin" code/analyze_results_v5_3.py
 "$python_bin" code/validate_release.py
 
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then

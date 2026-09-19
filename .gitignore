@@ -13,3 +13,6 @@ venv/
 paper/
 raw_attempts*.jsonl
 PRIVATE_*
+
+# Manuscript sources and local IEEE build artifacts are maintained separately
+IEEE-transaction/

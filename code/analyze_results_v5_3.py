@@ -14,7 +14,7 @@ DESIGN_PATH = RESULTS / "design_v5_3.json"
 PLAN_PATH = RESULTS / "planned_cells_v5_3.jsonl"
 RAW_LEDGER_PATH = RESULTS / "raw_attempts_v5_3.jsonl"
 RELEASE_LEDGER_PATH = RESULTS / "release_attempts_v5_3.jsonl"
-LEDGER_PATH = RELEASE_LEDGER_PATH if os.environ.get("PAPER_RELEASE_LEDGER") == "1" else RAW_LEDGER_PATH
+LEDGER_PATH = RAW_LEDGER_PATH if os.environ.get("PAPER_RAW_LEDGER") == "1" else RELEASE_LEDGER_PATH
 STOP_PATH = RESULTS / "v5_3_recovery_stop.json"
 JSON_OUT = RESULTS / "v5_3_final_analysis.json"
 TEXT_OUT = RESULTS / "v5_3_final_analysis.md"

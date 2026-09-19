@@ -5,9 +5,14 @@ type: software
 authors:
   - family-names: Hossain
     given-names: Md Sharif
+    orcid: "https://orcid.org/0009-0004-1684-7289"
   - family-names: Mahmud
-    given-names: Faez
+    given-names: Sheikh Faez
+    orcid: "https://orcid.org/0009-0008-3978-921X"
+  - family-names: Rahman
+    given-names: Khondokar Radwanur
+    orcid: "https://orcid.org/0009-0006-5939-2450"
 repository-code: "https://github.com/sharif2552/agentdojo-reaudit-artifact"
 license: MIT
 version: 1.0.0
-date-released: 2026-09-14
+date-released: 2026-09-19

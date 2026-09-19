@@ -14,7 +14,7 @@ RESULTS = ROOT / "results"
 PLAN = RESULTS / "planned_cells_v5_1_balanced.jsonl"
 RAW_LEDGER = RESULTS / "raw_attempts_v5_1.jsonl"
 RELEASE_LEDGER = RESULTS / "release_attempts_v5_1.jsonl"
-LEDGER = RELEASE_LEDGER if os.environ.get("PAPER_RELEASE_LEDGER") == "1" else RAW_LEDGER
+LEDGER = RAW_LEDGER if os.environ.get("PAPER_RAW_LEDGER") == "1" else RELEASE_LEDGER
 OUTPUT_JSON = RESULTS / "v5_1_balanced_final_analysis.json"
 OUTPUT_MD = RESULTS / "v5_1_balanced_final_analysis.md"
 MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
